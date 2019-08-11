@@ -34,9 +34,19 @@ button {
     padding-right: 10px;
     border: none;
     border-radius: 5px;
-
 }
 
 button:hover {
     background: rgba(0, 128, 128, 0.7);
+}
+
+.newDiv {
+    width: 220px;
+    float: left;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }

@@ -19,7 +19,8 @@
             const imageUrl = responseJson.data.image_original_url;
 
             // Creating a div for the gif
-            // const gifDiv = document.createElement("div");
+            const gifDiv = document.createElement("div");
+            gifDiv.setAttribute("class", "newDiv");
 
             const rating = results[i].rating;
 
@@ -29,6 +30,7 @@
 
             // image
             const gifImage = document.createElement("img");
+            gifImage.setAttribute("class", "img img-thumbnail");
 
             // source attribute of image 
             gifImage.setAttribute("src", imageUrl);
@@ -36,10 +38,10 @@
             gifImage.setAttribute("src", results[i].images.fixed_height.url);
 
             //place image on html
-            document.getElementById("giffs-view").prepend(gifImage);
-            document.getElementById("giffs-view").prepend(p);
+            gifDiv.append(p);
+            gifDiv.append(gifImage);
+            document.getElementById("giffs-view").prepend(gifDiv);
         }
-
     });
     }
 
