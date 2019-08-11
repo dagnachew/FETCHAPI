@@ -11,7 +11,7 @@
         return response.json();
         }).then(function(responseJson) {
             const results = responseJson.data;
-            console.log(results);
+            document.getElementById("giffs-view").innerHTML = "";
 
         // results loop
         for (let i = 0; i < results.length; i++) {
@@ -72,15 +72,14 @@
         document.getElementById("add-giff").addEventListener("click", function(event) {
         event.preventDefault();
 
-            // grab the input
-            var giff = document.getElementById("giff-input").value.trim();
+        // grab the input
+        var giff = document.getElementById("giff-input").value.trim();
 
-            // Adding to array
-            giffs.push(giff);
-            console.log(giffs);
+        // Adding to array
+        giffs.push(giff);
 
-            // Calling showButtons
-            showButtons();
+        // Calling showButtons
+        showButtons();
         });
 
     // Display initial buttons
