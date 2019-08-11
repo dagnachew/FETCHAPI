@@ -1,3 +1,42 @@
 body {
     background-color: rgb(207, 216, 221);
 }
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    margin: 10px;
+    width: 200px;
+    height: auto;
+}
+
+div {
+    padding: 10px;
+}
+
+button, div, form, input {
+    margin: 10px;
+}
+
+input#giff-input.form-control,
+button#add-giff {
+    margin-left: 0;
+    float: left;
+}
+
+button {
+    min-width: 100px;
+    background: teal;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background: rgba(0, 128, 128, 0.7);
+}

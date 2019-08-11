@@ -9,24 +9,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12" id="buttons">
-
-            </div>
+            <div class="col-md-12 p-0 m-0" id="buttons-view"></div>
         </div>
-        <div class="row">
-            <div class="col-md-8" id="images"></div>
-            <div class="col-md-4">
-                <form>
+        
+        <div class="row mt-0 pt-0 justify-content-between">
+            <div class="col-md-7  p-0 m-0" id="giffs-view"></div>
+            <div class="col-md-4  p-0 m-0">
+                <form id="giff-form">
                     <div class="form-group">
-                        <label for="search" class="bold mt-md-5">Add an animal</label>
-                        <input type="search" class="form-control" id="search">
-                        <button type="submit" class="btn  btn-sm btn-secondary mt-2 submit ">Search</button>
+                        <label for="giff-input">Add an animal</label>
+                        <input id="giff-input" type="text" class="form-control" id="search">
+                        <button id="add-giff" type="submit" class="mt-1">Search</button>
                     </div>
-            </form>
+                </form>
             </div>
         </div>
     </div>
