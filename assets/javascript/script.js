@@ -5,7 +5,6 @@
     function displaygiffInfo() {
 
         const giff = this.getAttribute("data-name");
-        const state = this.getAttribute("data-name");
         const queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giff + "&apikey=SyFrfcdyzuaywQoMApTmo3rvUzTFQx14&limit=10";
 
         fetch(queryURL).then(function (response) {
@@ -41,8 +40,19 @@
                 // source attribute of image 
                 gifImage.setAttribute("src", imageUrl);
 
-                gifImage.setAttribute("src", results[i].images.fixed_height.url);
+                gifImage.setAttribute("src", results[i].images.fixed_height_still.url);
 
+                gifImage.addEventListener('click', function () {
+                    const state = this.getAttribute("data-state");
+                    if (state === "still") {
+                        this.setAttribute('src', results[i].images.fixed_height_still.url);
+                        imageUrl.state = 'animate';
+                      } else {
+                        this.setAttribute('src', results[i].images.fixed_height.url);
+                        imageUrl.state = 'still';
+                      }
+                });
+             
 
                 //place image on html
                 gifDiv.append(p);
