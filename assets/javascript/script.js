@@ -1,5 +1,5 @@
     // Initial array of giffs
-    const giffs = ["tiger", "cat", "puppy", "bird", "skank", "hamster", "chicken", "frog", "shark", "lion"];
+    const giffs = ["tiger", "cat", "puppy", "bird", "gorilla", "hamster", "chicken", "bear", "shark", "lion"];
 
     // Function for dumping the JSON content for each button into the div
     function displaygiffInfo() {
