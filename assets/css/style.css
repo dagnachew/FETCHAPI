@@ -1,5 +1,7 @@
 body {
     background-color: rgb(207, 216, 221);
+    margin-top: 2px;
+    margin: 0 auto;
 }
 
 * {
@@ -16,8 +18,8 @@ div {
     padding: 10px;
 }
 
-button, div, form, input {
-    margin: 3px;
+button {
+    margin: 6px;
 }
 
 input#giff-input.form-control,
@@ -62,18 +64,26 @@ p {
         width: 50px;
         padding-left: 0px;
         padding-right: 0px;
-        border: 1px solid red;
-        margin-right: 5px;
-        margin-bottom: 5px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+    }
+
+    #buttons-view {
+        margin: 0 auto;
     }
 
     .container {
         padding-top: 0;
+        margin: 0 auto;
     }
 
     div.row {
         margin-bottom: 0px;
         margin: 0 auto;
+    }
+    
+    .row {
+        margin: 0 auto !important;
     }
 
     .newDiv {
@@ -81,6 +91,7 @@ p {
         float: left;
         padding: 0;
         margin: 0;
+        margin-right: 10px;
     }
 
     .img {
@@ -89,15 +100,19 @@ p {
     }
 
     .img-thumbnail {
-        padding: 5px;
-        margin: 5px;
+        margin-right: 5px;
     }
 
     p {
+        margin-top: 10px;
         padding-left: 5px;
     }
 
     #giffs-view {
         margin: 0 auto;
+    }
+
+    div {
+        margin-top: 30px;
     }
 }
