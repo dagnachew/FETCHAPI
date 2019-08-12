@@ -26,40 +26,39 @@
                 gifDiv.setAttribute("class", "newDiv");
 
                 const rating = results[i].rating;
-                const title = results[i].title
+                const title = results[i].title.toUpperCase();
 
                 if (results[i].rating !== "r" || results[i].rating === "pg") {
 
-                // p tag
-                const p = document.createElement("p");
-                p.innerHTML = "<strong>Title: </strong>" + title + "<br>" + "<strong>Rating: </strong>" + rating;
+                    // p tag
+                    const p = document.createElement("p");
+                    p.innerHTML = "<strong>Title: </strong>" + title + "<br>" + "<strong>Rating: </strong>" + rating;
 
-                // img tag
-                const gifImage = document.createElement("img");
-                gifImage.setAttribute("class", "img img-thumbnail");
+                    // img tag
+                    const gifImage = document.createElement("img");
+                    gifImage.setAttribute("class", "img img-thumbnail");
 
-                // source attribute of image 
-                gifImage.setAttribute("src", imageUrl);
+                    // source attribute of image 
+                    gifImage.setAttribute("src", imageUrl);
 
-                gifImage.setAttribute("src", results[i].images.fixed_height_still.url);
+                    gifImage.setAttribute("src", results[i].images.fixed_height_still.url);
 
-                // To change giffs from still to animate
-                gifImage.addEventListener('click', function () {
-                    const state = this.getAttribute("src");
-                    if (state === results[i].images.fixed_height_still.url) {
-                        this.setAttribute('src', results[i].images.fixed_height.url);
-                        imageUrl.state = 'animate';
-                      } else {
-                        this.setAttribute('src', results[i].images.fixed_height_still.url);
-                        imageUrl.state = 'still';
-                      }
-                });
-             
+                    // To change giffs from still to animate
+                    gifImage.addEventListener('click', function () {
+                        const state = this.getAttribute("src");
+                        if (state === results[i].images.fixed_height_still.url) {
+                            this.setAttribute('src', results[i].images.fixed_height.url);
+                            imageUrl.state = 'animate';
+                        } else {
+                            this.setAttribute('src', results[i].images.fixed_height_still.url);
+                            imageUrl.state = 'still';
+                        }
+                    });
 
-                //place image on html
-                gifDiv.append(p);
-                gifDiv.append(gifImage);
-                document.getElementById("giffs-view").prepend(gifDiv);
+                    //place image on html
+                    gifDiv.append(p);
+                    gifDiv.append(gifImage);
+                    document.getElementById("giffs-view").prepend(gifDiv);
                 }
             }
         });
