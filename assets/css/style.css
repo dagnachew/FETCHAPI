@@ -115,4 +115,8 @@ p {
     div {
         margin-top: 30px;
     }
+
+    .form-group {
+        margin-top: 0px;
+    }
 }
