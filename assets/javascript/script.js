@@ -11,6 +11,9 @@
         return response.json();
         }).then(function(responseJson) {
             const results = responseJson.data;
+            console.log(results);
+
+            // To empty result from previous button
             document.getElementById("giffs-view").innerHTML = "";
 
         // results loop

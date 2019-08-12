@@ -17,7 +17,7 @@ div {
 }
 
 button, div, form, input {
-    margin: 10px;
+    margin: 3px;
 }
 
 input#giff-input.form-control,
@@ -45,8 +45,59 @@ button:hover {
     float: left;
 }
 
+p {
+    margin-bottom: 0;
+    padding-left: 10px;
+
+}
 .img {
     width: 220px;
     height: 220px;
     object-fit: cover;
+}
+
+/* ====== MEDIA QUERIES ===== */
+@media (max-width: 600px) {
+    button {
+        width: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
+        border: 1px solid red;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+    .container {
+        padding-top: 0;
+    }
+
+    div.row {
+        margin-bottom: 0px;
+        margin: 0 auto;
+    }
+
+    .newDiv {
+        width: 150px;
+        float: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    .img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .img-thumbnail {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    p {
+        padding-left: 5px;
+    }
+
+    #giffs-view {
+        margin: 0 auto;
+    }
 }
