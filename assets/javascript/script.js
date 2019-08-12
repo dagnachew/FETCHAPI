@@ -1,5 +1,5 @@
     // Initial array of giffs
-    const giffs = ["elephant", "cat", "puppy", "bird", "skank", "hamster", "chicken", "frog", "shark", "lion"];
+    const giffs = ["tiger", "cat", "puppy", "bird", "skank", "hamster", "chicken", "frog", "shark", "lion"];
 
     // Function for dumping the JSON content for each button into the div
     function displaygiffInfo() {
@@ -26,14 +26,15 @@
                 gifDiv.setAttribute("class", "newDiv");
 
                 const rating = results[i].rating;
+                const title = results[i].title
 
                 if (results[i].rating !== "r" || results[i].rating === "pg") {
 
                 // p tag
                 const p = document.createElement("p");
-                p.innerHTML = "Rating: " + rating;
+                p.innerHTML = "<strong>Title: </strong>" + title + "<br>" + "<strong>Rating: </strong>" + rating;
 
-                // image
+                // img tag
                 const gifImage = document.createElement("img");
                 gifImage.setAttribute("class", "img img-thumbnail");
 
@@ -42,6 +43,7 @@
 
                 gifImage.setAttribute("src", results[i].images.fixed_height_still.url);
 
+                // To change giffs from still to animate
                 gifImage.addEventListener('click', function () {
                     const state = this.getAttribute("src");
                     if (state === results[i].images.fixed_height_still.url) {
@@ -71,15 +73,15 @@
 
         // Loop through giffs
         for (let i = 0; i < giffs.length; i++) {
-            // Then dynamically generating buttons for each giff in the array
+            // Generate buttons for each giff in the array
             const a = document.createElement("button");
-            // Adding a class of giff to our button
+            // Add a 'giff' class to our button
             a.classList.add("giff");
-            // Adding a data-attribute
+            // Add a data-attribute
             a.setAttribute("data-name", giffs[i]);
-            // Providing the initial button text
+            // Provide initial button text
             a.innerHTML = giffs[i];
-            // Adding the button to the buttons-view div
+            // Add button to the buttons-view div
             document.getElementById("buttons-view").append(a);
             // Function for displaying the giff info
             a.addEventListener("click", displaygiffInfo);
