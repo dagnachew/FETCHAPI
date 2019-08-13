@@ -48,10 +48,14 @@ button:hover {
 }
 
 p {
+    font-size: 11px;
+    width: 200px;
     margin-bottom: 0;
     padding-left: 10px;
-    font-size: 10px;
-
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .img {
