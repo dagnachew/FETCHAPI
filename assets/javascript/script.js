@@ -11,7 +11,6 @@
             return response.json();
         }).then(function (responseJson) {
             const results = responseJson.data;
-            console.log(results);
 
             // To empty result from previous button
             document.getElementById("giffs-view").innerHTML = "";
@@ -48,10 +47,8 @@
                         const state = this.getAttribute("src");
                         if (state === results[i].images.fixed_height_still.url) {
                             this.setAttribute('src', results[i].images.fixed_height.url);
-                            imageUrl.state = 'animate';
                         } else {
                             this.setAttribute('src', results[i].images.fixed_height_still.url);
-                            imageUrl.state = 'still';
                         }
                     });
 
@@ -92,7 +89,7 @@
         event.preventDefault();
 
         // grab the input
-        var giff = document.getElementById("giff-input").value.trim();
+        const giff = document.getElementById("giff-input").value.trim();
 
         // Adding to array
         giffs.push(giff);
