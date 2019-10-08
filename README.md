@@ -11,6 +11,10 @@ This page is a dynamic web page that populates itself with gifs of your choice. 
 * Javascript
 * GIPHY API
 
-Link to github pages: https://dagnachew.github.io/FETCHAPI/
+### Links 
 
-Link to portfolio page: https://dagnachew.github.io/Responsive-Portfolio/portfolio.html
+Github pages: https://dagnachew.github.io/FETCHAPI/
+
+Heroku: https://serene-eyrie-96546.herokuapp.com/
+
+Portfolio page: https://dagnachew.github.io/Responsive-Portfolio/
